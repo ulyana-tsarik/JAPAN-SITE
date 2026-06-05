@@ -1,0 +1,681 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background: #f4f4f4;
+  color: #222;
+}
+
+header {
+  width: min(1180px, calc(100% - 32px));
+  margin: 18px auto 0;
+  padding: 18px 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 0 3px 15px rgba(0,0,0,.08);
+}
+
+.logo {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.circle {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #cf2424;
+  color: #111;
+  font-size: 26px;
+}
+
+.logo h2 {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.logo p {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+
+nav {
+  display: flex;
+  gap: 32px;
+}
+
+nav a {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #111;
+  text-decoration: none;
+}
+
+nav a.active,
+nav a:hover {
+  color: #c72525;
+}
+
+.hero {
+  width: min(1180px, calc(100% - 32px));
+  min-height: 455px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 70px;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.55), rgba(255,255,255,.08)),
+    url('https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?auto=format&fit=crop&w=1600&q=85') center/cover;
+}
+
+.hero-text {
+  max-width: 510px;
+}
+
+.hero h1 {
+  font-size: 78px;
+  line-height: 1;
+}
+
+.hero h3 {
+  margin: 8px 0 20px;
+  font-size: 24px;
+  color: #b11f1f;
+}
+
+.hero p {
+  max-width: 450px;
+  margin-bottom: 26px;
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.btn,
+button {
+  display: inline-block;
+  border: 0;
+  border-radius: 5px;
+  padding: 13px 22px;
+  background: #c92828;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.why,
+.culture,
+.places,
+.contacts {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 42px 26px 54px;
+  background: #fff;
+  text-align: center;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+.divider {
+  width: 250px;
+  margin: 7px auto 22px;
+  border-top: 2px solid #c92828;
+  color: #c92828;
+  line-height: 0;
+}
+
+.subtitle {
+  margin-top: -8px;
+  margin-bottom: 28px;
+  font-family: Arial, sans-serif;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+  min-height: 135px;
+  padding: 20px;
+  border-left: 1px solid #ddd;
+}
+
+.card:first-child { border-left: 0; }
+
+.icon {
+  margin-bottom: 12px;
+  color: #c92828;
+  font-size: 38px;
+}
+
+.card h3,
+.culture-card h3 {
+  margin-bottom: 8px;
+  font-size: 17px;
+}
+
+.card p,
+.culture-card p,
+.about p,
+.contact-info p,
+form input,
+form textarea {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.about {
+  width: min(1180px, calc(100% - 32px));
+  margin: 22px auto 0;
+  padding: 60px 100px;
+  display: grid;
+  grid-template-columns: 1fr 330px;
+  gap: 90px;
+  background:
+    linear-gradient(rgba(255,255,255,.82), rgba(255,255,255,.86)),
+    url('https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?auto=format&fit=crop&w=1600&q=85') center/cover;
+}
+
+.about h2 {
+  margin-bottom: 24px;
+}
+
+.about p {
+  margin-bottom: 20px;
+  font-size: 17px;
+}
+
+.facts {
+  padding: 26px 34px;
+  border-radius: 8px;
+  background: #f7f7f7;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.facts p {
+  position: relative;
+  margin-bottom: 22px;
+  padding-left: 44px;
+}
+
+.facts span {
+  position: absolute;
+  left: 0;
+  color: #c92828;
+  font-size: 26px;
+}
+
+.quote {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 24px;
+  background: #1f1f1f;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+}
+
+.culture {
+  margin-top: 22px;
+}
+
+.culture-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.culture-card {
+  overflow: hidden;
+  border: 1px solid #e4e4e4;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 8px 18px rgba(0,0,0,.07);
+}
+
+.culture-card img {
+  width: 100%;
+  height: 255px;
+  object-fit: cover;
+}
+
+.culture-card h3 {
+  margin-top: 22px;
+}
+
+.culture-card p {
+  padding: 0 20px 24px;
+}
+
+.place-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.place-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.place-grid h3 {
+  margin-top: 12px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr 380px;
+  gap: 26px;
+  text-align: left;
+}
+
+.contact-info,
+form {
+  padding: 28px;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 8px 22px rgba(0,0,0,.09);
+}
+
+.contact-info p {
+  margin-bottom: 24px;
+}
+
+form h3 {
+  margin-bottom: 18px;
+  font-size: 22px;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-bottom: 14px;
+  padding: 13px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+textarea {
+  height: 130px;
+  resize: none;
+}
+
+.contact-img {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+footer {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto 24px;
+  padding: 24px 36px;
+  display: flex;
+  justify-content: space-between;
+  background: #1f1f1f;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  header,
+  nav,
+  footer {
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+h2 {
+    font-size: 24px !important;       /* Уменьшаем размер шрифта на смартфонах */
+    white-space: normal !important;   /* Разрешаем тексту переноситься на новую строку */
+    text-align: center !important;    /* Выравниваем строго по центру */
+    padding: 0 15px !important;       /* Делаем отступы по бокам, чтобы буквы не липли к краям */
+  }
+
+  /* Исправляем меню: выстраиваем ссылки в аккуратный горизонтальный ряд по центру */
+  nav {
+    display: flex !important;
+    flex-direction: row !important; /* Вместо колонки делаем строчку */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Комфортный отступ между ссылками */
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  /* Сами ссылки делаем чуть крупнее для удобного нажатия пальцем */
+  nav a {
+    font-size: 15px;
+    padding: 5px 10px;
+  }
+
+  .hero {
+    padding: 40px 24px;
+  }
+
+  .hero h1 {
+    font-size: 50px;
+  }
+
+  .cards,
+  .culture-grid,
+  .place-grid,
+  .about,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Адаптируем форму и гейшу в секции контактов */
+  #contactForm,
+  .contact-img {
+    width: 100% !important;
+    max-width: 450px !important; /* Чтобы на больших телефонах они не растягивались на весь экран */
+    height: auto !important;
+    margin: 0 auto !important; /* Центрируем посередине экрана */
+  }
+
+  .about {
+    padding: 40px 24px;
+    gap: 24px;
+  }
+}
+
+/* 1. Базовое состояние подложки окна (полностью скрыто) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6); /* Красивое полупрозрачное затемнение */
+  display: none; /* Скрыто по умолчанию, пока JS не добавит .show */
+  align-items: center;
+  justify-content: center;
+  z-index: 99999; /* Поверх всех элементов сайта */
+}
+
+/* 2. АКТИВАЦИЯ ОКНА ЧЕРЕЗ JAVASCRIPT */
+.modal-overlay.show {
+  display: flex; /* Окно мгновенно появляется на экране, когда сработал скрипт */
+}
+
+/* 3. Белое окошко с текстом внутри */
+.modal-box {
+  background: #ffffff;
+  padding: 35px 45px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  max-width: 400px;
+  width: 100%;
+}
+
+.modal-box h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-family: sans-serif;
+  color: #c92828; /* Красивый красный цвет заголовка */
+}
+
+.modal-box p {
+  color: #444444;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+/* 4. Красная кнопка ОК */
+.modal-btn {
+  display: inline-block;
+  padding: 11px 35px;
+  background: #bc2626; /* В тон вашей кнопке "Отправить" */
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-family: sans-serif;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.modal-btn:hover {
+  background: #a11f1f; /* Потемнение при наведении */
+}
+
+/* Контейнер-обертка для картинки, удерживающий тултип на месте */
+.tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.tooltip-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Сохраняем скругление углов ваших картинок */
+}
+
+/* --- СОЗДАНИЕ ТУЛТИПА (ОБЛАЧКА С ТЕКСТОМ) --- */
+.tooltip-wrapper::after {
+  content: attr(data-tooltip); /* Автоматически берет текст из HTML-атрибута */
+  position: absolute;
+  bottom: 105%; /* Размещает тултип строго над картинкой */
+  left: 50%;
+  transform: translateX(-50%) translateY(10px); /* Смещение для эффекта анимации */
+  
+  /* Стили внешнего вида */
+  background-color: rgba(30, 30, 30, 0.95); /* Почти черный полупрозрачный фон */
+  color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
+  width: 250px; /* Оптимальная ширина под длинный текст */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  
+  /* Начальное скрытое состояние */
+  opacity: 0;
+  pointer-events: none; /* Чтобы тултип не мешал водить мышкой */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Плавное проявление */
+}
+
+/* --- МАЛЕНЬКИЙ ТРЕУГОЛЬНИК (СТРЕЛКА) ПОД ТУЛТИПОМ --- */
+.tooltip-wrapper::before {
+  content: "";
+  position: absolute;
+  bottom: 105%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  
+  /* Рисуем стрелочку с помощью border */
+  border-width: 6px 6px 0 6px;
+  border-style: solid;
+  border-color: rgba(30, 30, 30, 0.95) transparent transparent transparent;
+  z-index: 100;
+  
+  /* Начальное скрытое состояние */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* --- АКТИВАЦИЯ ПРИ НАВЕДЕНИИ (HOVER) --- */
+.tooltip-wrapper:hover::after,
+.tooltip-wrapper:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0); /* Тултип плавно опускается на свое место */
+}
+/* Контейнер для картинки, изолирующий всплывающий слой внутри размеров фото */
+.img-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px; /* Если у вас у картинок были скруглены углы, укажите этот радиус тут */
+  width: 100%;
+}
+
+/* Делаем, чтобы картинка корректно вела себя внутри контейнера */
+.img-box img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Скрытый по умолчанию слой затемнения с текстом под размер картинки */
+.img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75); /* Полупрозрачный черный цвет */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  box-sizing: border-box;
+  opacity: 0; /* Полностью прозрачный */
+  transition: opacity 0.3s ease; /* Эффект плавного проявления */
+}
+
+/* Стили самого текста внутри подсказки */
+.img-overlay span {
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* --- ЭФФЕКТ ПРИ НАВЕДЕНИИ МЫШКИ (HOVER) --- */
+
+/* При наведении на картинку проявляем слой с текстом */
+.img-box:hover .img-overlay {
+  opacity: 1;
+}
+
+/* Эффект легкого зума самой картинки на фоне */
+.img-box:hover img {
+  transform: scale(1.05);
+}
+/* Создаем темную плашку прямо внутри картинки из атрибута data-tooltip */
+.tooltip-wrapper::after {
+  content: attr(data-tooltip); /* Забираем текст из HTML */
+  position: absolute;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;  /* Принудительно растягиваем на всю ширину картинки */
+  height: 100% !important; /* Принудительно растягиваем на всю высоту картинки */
+  max-width: 100% !important; /* Сбрасываем старые ограничения ширины в 250px */
+  background: rgba(0, 0, 0, 0.75) !important; /* Точно такое же затемнение */
+  
+  /* Центрируем текст внутри картинки */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 15px !important;
+  box-sizing: border-box !important;
+  
+  /* Стили текста */
+  color: #ffffff !important;
+  font-family: sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  text-align: center !important;
+  
+  /* Скрываем по умолчанию и перебиваем все старые стили анимаций */
+  opacity: 0;
+  pointer-events: none;
+  bottom: auto !important; 
+  transform: none !important; 
+  transition: opacity 0.3s ease !important;
+}
+/* Полностью убираем стрелочки над картинками */
+.tooltip-wrapper::before {
+  content: none !important;
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+
+/* =======================================================
+   АДАПТИВНАЯ ВЕРСИЯ ДЛЯ СМАРТФОНОВ И ПЛАНШЕТОВ (до 768px)
+   ======================================================= */
+@media (max-width: 768px) {
+  
+  /* 1. Перестраиваем сетку достопримечательностей в 1 колонку */
+  .place-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 35px !important; /* Комфортный отступ между карточками по вертикали */
+    padding: 0 15px !important; /* Чтобы карточки не липли к краям экрана */
+  }
+
+  /* 2. Перестраиваем сетку культуры в 1 колонку */
+  .culture-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 35px !important;
+    padding: 0 15px !important;
+  }
+
+  /* Ограничиваем максимальную ширину карточек на телефонах, чтобы они не были гигантскими */
+  .place-card, 
+  .culture-card {
+    width: 100% !important;
+    max-width: 450px !important;
+    margin: 0 auto !important; /* Центрируем карточку на экране */
+  }
+
+  /* 3. Уменьшаем размер главного шрифта секций, чтобы он не переносился по одной букве */
+  h2 {
+    font-size: 26px !important;
+    text-align: center !important;
+  }
+
+  /* 4. Адаптируем форму контактов и изображение гейши */
+  /* Из-за flex-direction: column форма встанет сверху, а гейша аккуратно опустится под неё */
+  .contact-container {
+    display: flex !important;
+    flex-direction: column !important; 
+    align-items: center !important;
+    padding: 0 20px !important;
+    gap: 25px !important;
+  }
+
+  /* Делаем форму и картинку гейши адаптивными по ширине */
+  #contactForm, 
+  .contact-img {
+    width: 100% !important; 
+    max-width: 450px !important; /* Ограничиваем ширину для аккуратного вида */
+    height: auto !important;
+  }
+}
